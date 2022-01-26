@@ -1,6 +1,6 @@
 const head = function(actual) {
   return actual[0];
-}
+};
 
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
