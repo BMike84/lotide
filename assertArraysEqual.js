@@ -1,5 +1,5 @@
-function assertArraysEqual(eqArrays) {
-  if(eqArrays === false) {
+function assertArraysEqual(actual, expected) {
+  if(actual !== expected) {
     console.log('The arrays did not match!');
   } else {
     console.log('The arrays matched!');
@@ -19,7 +19,7 @@ function eqArrays(one, two) {
   return true;
 }
 
-assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]));
-assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]));
-assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]));
-assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]));
+assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);
+assertArraysEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);
