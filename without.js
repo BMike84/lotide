@@ -1,35 +1,35 @@
-function assertArraysEqual(actual, expected) {
-  if(actual !== expected) {
+const assertArraysEqual = function(actual, expected) {
+  if (actual !== expected) {
     console.log(`${actual} !== ${expected}`);
   } else {
     console.log(`[${actual}] !== ${expected}`);
   }
   
-}
+};
 
-function eqArrays(one, two) {
-  if(one.length !== two.length) {
+const eqArrays = function(one, two) {
+  if (one.length !== two.length) {
     return false;
   }
   for (let i = 0; i < one.length; i++) {
-    if(one[i] !== two[i]) {
+    if (one[i] !== two[i]) {
       return false;
     }
   }
   return true;
-}
+};
 
-function without(array, value) {
+const without = function(array, value) {
   let newArr = array;
-  for(let i = 0; i < newArr.length; i ++) {
+  for (let i = 0; i < newArr.length; i ++) {
     for (let val of value) {
-      if(newArr[i] === val) {
+      if (newArr[i] === val) {
         const arr = newArr.splice(i, 1);
       }
-    }    
+    }
   }
   return newArr;
-}
+};
 
 
 const words = ["hello", "world", "lighthouse"];
