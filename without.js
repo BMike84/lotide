@@ -1,18 +1,17 @@
 const assertArraysEqual = function(actual, expected) {
-  if (actual !== expected) {
-    console.log(`${actual} !== ${expected}`);
+  if (eqArrays(actual, expected)) {
+    console.log(`${actual} === ${expected}`);
   } else {
     console.log(`[${actual}] !== ${expected}`);
-  }
-  
+  }  
 };
 
-const eqArrays = function(one, two) {
-  if (one.length !== two.length) {
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
-  for (let i = 0; i < one.length; i++) {
-    if (one[i] !== two[i]) {
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     }
   }

@@ -1,23 +1,24 @@
-function assertArraysEqual(actual, expected) {
-  if(actual !== expected) {
-    console.log('The arrays did not match!');
+const assertArraysEqual = function(actual, expected) {
+  if (eqArrays(actual, expected)) {
+    console.log(`${actual} === ${expected}`);
   } else {
-    console.log('The arrays matched!');
-  }
-  
-}
+    console.log(`[${actual}] !== ${expected}`);
+  }  
+};
 
-function eqArrays(one, two) {
-  if(one.length !== two.length) {
+const eqArrays = function(arrayOne, arrayTwo) {
+  if (arrayOne.length !== arrayTwo.length) {
     return false;
   }
-  for (let i = 0; i < one.length; i++) {
-    if(one[i] !== two[i]) {
+  for (let i = 0; i < arrayOne.length; i++) {
+    if (arrayOne[i] !== arrayTwo[i]) {
       return false;
     }
   }
   return true;
-}
+};
+
+
 
 assertArraysEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
 assertArraysEqual(eqArrays([1, 2, 3], [3, 2, 1]), true);
