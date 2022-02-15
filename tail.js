@@ -7,7 +7,4 @@ const tail = function(words) {
 
 module.exports = tail;
 
-// const words = ["Yo Yo", "Lighthouse", "Labs"];
-// tail(words);
-// assertEqual(tail(words).length, 3);
 
