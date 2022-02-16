@@ -1,7 +1,7 @@
 {
-  "name": "lotide",
+  "name": "@michaelb84/lotide",
   "version": "1.0.0",
-  "description": "",
+  "description": "a clone of the lodash javascript library for practicing js",
   "main": "main.js",
   "directories": {
     "test": "test"
@@ -13,7 +13,7 @@
     "type": "git",
     "url": "git+https://github.com/BMike84/lotide.git"
   },
-  "author": "",
+  "author": "Michael Buffone",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/BMike84/lotide/issues"
