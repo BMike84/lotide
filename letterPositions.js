@@ -17,7 +17,7 @@ const eqArrays = function(arrayOne, arrayTwo) {
   }
   return true;
 };
-//figure out how to not put space in the results!
+
 const letterPositions = function (sentence) {
   const results = {};
 
@@ -32,6 +32,6 @@ const letterPositions = function (sentence) {
   }
   return results;
 }
-//remove space in keys in objects
+
 console.log(letterPositions('hello world'));
 assertArraysEqual(letterPositions("hello").o, [3]);
