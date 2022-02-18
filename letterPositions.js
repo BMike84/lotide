@@ -39,4 +39,8 @@ const letterPositions = function (sentence) {
   return results;
 }
 
+<<<<<<< HEAD
 assertArraysEqual(letterPositions("hello").o, [4]);
+=======
+assertArraysEqual(letterPositions("hello").o, [4]);
+>>>>>>> ca476235e962cfc0b35471a1e8797d73b5206fd6
