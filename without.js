@@ -19,19 +19,19 @@ const eqArrays = function(arrayOne, arrayTwo) {
 };
 
 const without = function(array, value) {
-  let newArr = array;
-  for (let i = 0; i < newArr.length; i ++) {
-    for (let val of value) {
-      if (newArr[i] === val) {
-        const arr = newArr.splice(i, 1);
-      }
+  let resultsArray = [];
+  for (const item of array) {
+    if (!value.includes(item)) {
+      resultsArray.push(item);
     }
   }
-  return newArr;
+  return resultsArray;
 };
 
 
 const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]); // no need to capture return value for this test case
-// Make sure the original array was not altered by the without function
+without(words, ["lighthouse"]); 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+console.log(without([1, 2, 3], [1]));
+console.log(without(["1", "2", "3"], [1, 2, "3"])) 
+console.log(without(["1", "1", "1", "2", "3", "1" , "1"], ["1", 2, "3"]) )
