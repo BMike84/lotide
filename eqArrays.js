@@ -1,5 +1,6 @@
 const assertEqual = require('./assertEqual');
 
+//function that see if 2 arrays are equal
 const eqArrays = function(array1, array2) {
   if (array1.length !== array2.length) {
     return false;
