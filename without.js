@@ -1,8 +1,8 @@
 const assertArraysEqual = function(actual, expected) {
   if (eqArrays(actual, expected)) {
-    console.log(`${actual} === ${expected}`);
+    console.log(`✅✅✅ Actual Results: ${actual} === Expected Results: ${expected}`);
   } else {
-    console.log(`[${actual}] !== ${expected}`);
+    console.log(`🛑🛑🛑 Actual Results: ${actual} !== Expected Results: ${expected}`);
   }  
 };
 
@@ -32,6 +32,4 @@ const without = function(array, value) {
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
-console.log(without([1, 2, 3], [1]));
-console.log(without(["1", "2", "3"], [1, 2, "3"])) 
-console.log(without(["1", "1", "1", "2", "3", "1" , "1"], ["1", 2, "3"]) )
+
