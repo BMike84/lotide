@@ -1,8 +1,6 @@
 const assertEqual = require('./assertEqual');
 
-// allItems: an array of strings that we need to look through
-// itemsCount: an object specifying what to count
-
+//counts how many times a specific element comes up
 const countOnly = function(allItems, itemsToCount) {
   const results = {};
 
