@@ -1,13 +1,18 @@
-function eqArrays(one, two) {
-  if(one.length !== two.length) {
+const eqArrays = function(array1, array2) {
+  if (array1.length !== array2.length) {
     return false;
-  }
-  for (let i = 0; i < one.length; i++) {
-    if(one[i] !== two[i]) {
-      return false;
+  } else {
+    for (let i = 0; i < array1.length; i++) {
+      if (Array.isArray(array1[i]) && Array.isArray(array2[i])) {
+        if (!eqArrays(array1[i], array2[i])) {
+          return false;
+        }
+      } else if (array1[i] !== array2[i]) {
+        return false;
+      }
     }
+    return true;
   }
-  return true;
 }
 
 const eqObjects = function(object1, object2) {
@@ -45,24 +50,16 @@ const assertObjectEqual = function(actual, expected) {
 
 const ab = {a: '1', b: '2'};
 const ba = {b: '2', a: '1'};
-console.log('ab === ba');
 assertObjectEqual(eqObjects(ab, ba), true);
 
-
-console.log('------------');
-console.log('ab === abc');
 const abc = { a: "1", b: "2", c: "3" };
 assertObjectEqual(eqObjects(ab, abc), false);
 
-console.log('------------');
 console.log('cd === dc');
 
 const cd = { c: "1", d: ["2", 3] };
 const dc = { d: ["2", 3], c: "1" };
 assertObjectEqual(eqObjects(cd, dc), true);
-
-console.log('------------');
-console.log('cd === cd2');
 
 const cd2 = { c: "1", d: ["2", 3, 4] };
 assertObjectEqual(eqObjects(cd, cd2), false);
