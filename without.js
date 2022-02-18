@@ -28,7 +28,7 @@ const without = function(array, value) {
   return resultsArray;
 };
 
-
+//test
 const words = ["hello", "world", "lighthouse"];
 without(words, ["lighthouse"]); 
 assertArraysEqual(words, ["hello", "world", "lighthouse"]);
