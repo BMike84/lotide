@@ -7,10 +7,10 @@ const assertEqual = function(actual, expected) {
 };
 
 const countLetters = function(string) {
-  string = string.toLowerCase(); //use can also use .replaceAll(' ', '');
+  string = string.toLowerCase();
   const count = {};
   for (let letter of string) {
-    if(letter === ' ') {
+    if (letter === ' ') {
       count[letter];
     }else if (count[letter]) {
       count[letter]++;
@@ -25,4 +25,3 @@ const results = countLetters('Lighthouse Labs looks good');
 
 assertEqual(results['l'], 3);
 assertEqual(results['h'], 2)
-console.log(countLetters('Lighthouse Labs'))
