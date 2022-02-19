@@ -2,10 +2,10 @@ const assertArraysEqual = require('./assertArraysEqual');
 const eqArrays = require('./eqArrays');
 
 
-const without = function(array, value) {
+const without = function(array, removeItems) {
   let resultsArray = [];
   for (const item of array) {
-    if (!value.includes(item)) {
+    if (!removeItems.includes(item)) {
       resultsArray.push(item);
     }
   }
