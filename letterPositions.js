@@ -1,5 +1,4 @@
 const assertArraysEqual = require('./assertArraysEqual');
-const eqArrays = require('./eqArrays');
 
 const letterPositions = function (sentence) {
   const results = {};
@@ -19,5 +18,5 @@ const letterPositions = function (sentence) {
 module.exports = letterPositions;
 
 assertArraysEqual(letterPositions("hello").o, [4]);
-assertArraysEqual(letterPositions("hello").o, [4]);
+assertArraysEqual(letterPositions("hello").l, [2, 3]);
 
